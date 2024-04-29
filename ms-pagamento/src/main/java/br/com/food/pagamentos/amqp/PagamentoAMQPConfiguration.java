@@ -43,8 +43,10 @@ public class PagamentoAMQPConfiguration {
         return  rabbitTemplate;
     }
 
+    //criando uma exchange
+    @Bean
     public FanoutExchange fanoutExchange(){
-        return new FanoutExchange("pagamentos.ex")
+        return new FanoutExchange("pagamentos.ex");
     }
 
 
